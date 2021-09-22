@@ -1,7 +1,7 @@
 import { createPrismic } from "@prismicio/vue";
 
 const prismic = createPrismic({
-  endpoint: "the-last-straw",
+  endpoint: "mybestrecipes",
   clientConfig: {
     defaultParams: {
       routes: [
