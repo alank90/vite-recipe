@@ -1,11 +1,11 @@
 <template>
   <main class="container">
-      {{ home }}
-    <!-- <header v-if="home" class="block">
-      <h1>{{ $prismic.asText(home.data.title) }}</h1>
-      <prismic-rich-text :field="home.data.description" />
+    <header v-if="data" class="block">
+      <h1>{{ $prismic.asText(data.data.title) }}</h1>
+      <prismic-rich-text :field="data.data.description" />
+      <prismic-image :field="data.data.home_image" />
     </header>
-
+    <!-- 
     <ul class="stack block" v-if="recipes">
       <li v-for="recipe in recipes" :key="recipe.uid">
         <prismic-link :field="recipe">
@@ -57,7 +57,7 @@ import {
   useSinglePrismicDocument,
 } from "@prismicio/vue";
 
-const home = useSinglePrismicDocument("home");
+const { data } = useSinglePrismicDocument("home");
 
 /* const { data: home } = useSinglePrismicDocument("home");
 const { data: recipes } = useAllPrismicDocumentsByType("recipes"); */
