@@ -5,6 +5,37 @@
       <prismic-rich-text :field="data.data.description" />
       <prismic-image :field="data.data.home_image" />
     </header>
+
+    <ul class="stack block">
+      <li v-for="recipe in recipes" :key="recipe.uid">
+        <prismic-link :field="recipe">
+          <article class="nes-container is-rounded with-title">
+            <prismic-text
+              :field="recipe.data.title"
+              wrapper="h2"
+              class="title"
+            />
+            <section>
+              <prismic-image :field="recipe.data.thumbnail" />
+              <div class="stack">
+                <ul>
+                  <li>
+                    <div class="nes-badge is-splited">
+                      <span class="is-dark">
+                        dur.
+                        <span class="is-primary">
+                          {{ recipe.data.duration }}
+                        </span>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </article>
+        </prismic-link>
+      </li>
+    </ul>
     <!-- 
     <ul class="stack block" v-if="recipes">
       <li v-for="recipe in recipes" :key="recipe.uid">
@@ -58,6 +89,7 @@ import {
 } from "@prismicio/vue";
 
 const { data } = useSinglePrismicDocument("home");
+const { data: recipes } = useAllPrismicDocumentsByType("recipe");
 
 /* const { data: home } = useSinglePrismicDocument("home");
 const { data: recipes } = useAllPrismicDocumentsByType("recipes"); */
