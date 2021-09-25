@@ -45,3 +45,6 @@ Then, add "prettier" to the "extends" array in your .eslintrc.\* file. Make sure
 ```
 
 That’s it! Extending "prettier" turns off a bunch of core ESLint rules, as well as a few rules from ESLint plugins.
+
+### Updating all NPM packages
+`  npx npm-check --global --update-all `
