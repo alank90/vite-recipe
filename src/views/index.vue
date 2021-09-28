@@ -21,13 +21,12 @@
                 <ul>
                   <li>
                     <div class="nes-badge is-splited">
-                      <span class="is-dark">
-                        dur.
-                        <span class="is-primary">
-                          {{ recipe.data.duration }}
-                        </span>
+                      <span class="is-dark"> dur. -</span>
+                      <span class="is-primary"
+                        >{{ recipe.data.duration[0].text }}
                       </span>
                     </div>
+                    <prismic-rich-text :field="recipe.data.description" />
                   </li>
                 </ul>
               </div>
@@ -90,9 +89,6 @@ import {
 
 const { data } = useSinglePrismicDocument("home");
 const { data: recipes } = useAllPrismicDocumentsByType("recipe");
-
-/* const { data: home } = useSinglePrismicDocument("home");
-const { data: recipes } = useAllPrismicDocumentsByType("recipes"); */
 </script>
 
 <style scoped>
