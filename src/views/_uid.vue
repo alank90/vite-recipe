@@ -16,10 +16,11 @@ import {
   getSliceZoneComponents,
   usePrismicDocumentByUID,
 } from "@prismicio/vue";
+import BannerImage from "../components/BannerImage.vue";
 
 const route = useRoute();
 
 // eslint-disable-next-line no-unused-vars
 const { data: recipe } = usePrismicDocumentByUID("recipe", route.params.uid);
-const components = getSliceZoneComponents({});
+const components = getSliceZoneComponents({ banner_image: BannerImage});
 </script>

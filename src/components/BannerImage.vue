@@ -1,12 +1,12 @@
 <template>
-    <figure> 
-
-    </figure>
+  <figure>
+    <prismic-image :field="slice.primary.image" />
+  </figure>
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue'
+import { getSliceComponentProps } from "@prismicio/vue";
 export default {
-    props: getSliceComponentProps().
-}
+  props: getSliceComponentProps(),
+};
 </script>
