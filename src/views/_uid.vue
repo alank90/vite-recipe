@@ -22,5 +22,5 @@ const route = useRoute();
 
 // eslint-disable-next-line no-unused-vars
 const { data: recipe } = usePrismicDocumentByUID("recipe", route.params.uid);
-const components = getSliceZoneComponents({ banner_image: BannerImage});
+const components = getSliceZoneComponents({ bannerimage: BannerImage });
 </script>
