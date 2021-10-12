@@ -18,6 +18,7 @@ import {
 } from "@prismicio/vue";
 import BannerImage from "../components/slices/BannerImage.vue";
 import Ingredients from "../components/slices/Ingredients.vue";
+import Directions from "../components/slices/Directions.vue";
 
 const route = useRoute();
 
@@ -26,5 +27,6 @@ const { data: recipe } = usePrismicDocumentByUID("recipe", route.params.uid);
 const components = getSliceZoneComponents({
   bannerimage: BannerImage,
   ingredients: Ingredients,
+  directions: Directions,
 });
 </script>
