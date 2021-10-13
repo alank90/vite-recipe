@@ -6,7 +6,7 @@
       <prismic-image :field="data.data.home_image" />
     </header>
 
-    <ul class="stack block">
+    <ul class="stack block" v-if="recipes">
       <li v-for="recipe in recipes" :key="recipe.uid">
         <prismic-link :field="recipe">
           <article class="nes-container is-rounded with-title">

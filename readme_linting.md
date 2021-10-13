@@ -21,6 +21,18 @@ In Vue 3 you can have more then one root element. The **eslint-plugin-vue** does
 
 `"rules": { "vue/no-multiple-template-root": "off" }`
 
+## Error _"Module is not defined"_ with eslint
+
+The module global is specific to Node.js, ESLint needs to be configured to recognize it.
+To enable node support, add it to the _env_ field in the **eslintrc** file.
+
+```
+env: {
+    node: true,
+  }
+  ```
+
+
 ## Integrating Prettier w/ESLint into your project
 
 ### Installing Prettier in VSCode
