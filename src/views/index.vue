@@ -1,7 +1,6 @@
 <template>
   <main class="container">
     <header v-if="data" class="block">
-      <h1>{{ $prismic.asText(data.data.title) }}</h1>
       <prismic-rich-text :field="data.data.description" />
       <prismic-image :field="data.data.home_image" />
     </header>

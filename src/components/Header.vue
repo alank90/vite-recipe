@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <router-link to="/">
-        <h2>Alan's Recipes</h2>
+        <h1>Alan's Recipes</h1>
       </router-link>
       <img src="../assets/images/soup.jpg" alt="" />
     </div>
