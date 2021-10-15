@@ -6,7 +6,7 @@ const prismic = createPrismic({
     defaultParams: {
       routes: [
         { type: "home", path: "/" },
-        { type: "recipes", path: "/recipes/:uid" },
+        { type: "recipe", path: "/recipe/:uid" },
       ],
     },
   },

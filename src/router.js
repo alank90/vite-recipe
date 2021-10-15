@@ -10,7 +10,7 @@ const router = createRouter({
         import(/* webpackChunkName: "index" */ "./views/index.vue"),
     },
     {
-      path: "/recipes/:uid",
+      path: "/recipe/:uid",
       name: "single-recipe",
       component: () =>
         import(/* webpackChunkName: "recipes--uid" */ "./views/_uid.vue"),
