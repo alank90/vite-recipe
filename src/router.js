@@ -15,11 +15,6 @@ const router = createRouter({
       component: () =>
         import(/* webpackChunkName: "recipes--uid" */ "./views/_uid.vue"),
     },
-    {
-      path: "/:pathMatch(.*)*",
-      name: "FourOFour",
-      component: () => import("./components/FourOFour.vue"),
-    },
   ],
 });
 
