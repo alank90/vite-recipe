@@ -15,11 +15,9 @@ _Note- Remember to add node_modules/ directory to .gitignore file befor the comm
 **\$ git push -u origin [new_branch]**
 
 **\*Note- To simplify workflow on your local setup issue command:
-
-**\$ git config --global push.default current**
-
+**$ git config --global push.default current
  Now in future only have to issue command 
- **\$ git push -u** from command line.
+ **$ git push -u from command line.
 
 ## ===== Add existing remote branch to a local repo and track branch: =====
 
@@ -190,18 +188,17 @@ $ git push
 **npm list -g --depth 0**
 
 ## ==== Updating Global Packages ========================
+To check which global packages need updating:
+
+**npx npm-check --global**
 
 To update global packages, you can use:
 
-**npm install -g** _nodemon_
-
-To find out which packages need to be updated, you can use _npm outdated -g --depth=0_.
-
-To update all global packages, you can use **_npm update -g_**
+**npx npm-check --global --update-all**
 
 To force update to another major version use npm package command:
 
-**npm i -g** _nodemon@latest_
+**npm i -g** _packagename@latest_
 
 **To update project package dependencies to latest major version(s), install the** _npm-check-updates_ **package globally:**
 
